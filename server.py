@@ -142,7 +142,9 @@ async def background_refresher() -> None:
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    boot_refresh()
+    # boot refresh is sync (probes + asyncio.run inside); run it in a thread so
+    # it doesn't conflict with uvicorn's running event loop
+    await asyncio.get_running_loop().run_in_executor(None, boot_refresh)
     task = asyncio.create_task(background_refresher())
     print(f"OpenCode Free Proxy {PROXY_VERSION} on http://0.0.0.0:{PORT}")
     print("  OpenAI:    POST /v1/chat/completions")
