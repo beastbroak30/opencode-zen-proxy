@@ -25,28 +25,20 @@ On every start:
 
 ## Quick setup
 
-**Windows (PowerShell):**
-```powershell
-.\setup.ps1
-```
+One universal command (macOS / Linux / Windows, Python 3.10+):
 
-**macOS / Linux:**
 ```bash
-chmod +x setup.sh && ./setup.sh
+python setup.py
 ```
 
-The setup script installs python deps, starts `opencode serve` in the
-background (port 4096) if it isn't running, probes free models, and starts
-the proxy on port 6446.
+It installs python deps, starts `opencode serve` in the background (port 4096)
+if it isn't running, probes free models, and starts the proxy on port 6446.
 
-Or manually:
+Options: `python setup.py --no-check` (use cache), `--fetch-only`,
+`--no-serve`, `--skip-install`.
 
-```powershell
-python run.py          # installs deps (uv/pip), fetches, probes, serves
-python run.py --no-check
-python run.py --fetch-only
-python run.py --list
-```
+You can still use the older runner directly: `python run.py` (`--no-check`,
+`--fetch-only`, `--list`, `--skip-install`).
 
 ## Use
 
