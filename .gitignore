@@ -1,0 +1,6 @@
+api-keys.json
+*.log
+__pycache__/
+*.pyc
+.env
+
