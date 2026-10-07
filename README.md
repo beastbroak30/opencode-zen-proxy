@@ -69,6 +69,18 @@ Invoke-RestMethod http://localhost:6446/v1/chat/completions -Method Post `
 Stream reasoning is returned as `delta.reasoning_content` (OpenAI format) and
 `thinking_delta` (Anthropic format).
 
+### Privacy audit (2026-10-07)
+
+- No API keys, tokens, or session data are committed (`api-keys.json`, logs
+  and caches are git-ignored).
+- Upstream credentials are read from the OS credential store at runtime only
+  (Windows Credential Manager entry `zed:url=https://opencode.ai/zen`, or the
+  `OPENCODE_API_KEY` env var).
+- No requests are sent anywhere except `opencode.ai` (and `models.dev` /
+  GitHub raw for the model catalog).
+- The proxy binds `0.0.0.0` by default; set `REQUIRE_AUTH=1` before exposing
+  it beyond your LAN.
+
 Env: `PROXY_PORT=6446`, `KEYS_FILE=./api-keys.json`, `REFRESH_MINUTES=30`,
 `SKIP_CHECK=1`, `REQUIRE_AUTH=0|1`, `OPENCODE_SERVER_URL` (default
 `http://127.0.0.1:4096`).
