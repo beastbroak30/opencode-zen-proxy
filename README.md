@@ -1,4 +1,4 @@
-# opencode-free-proxy-py
+# opencode-zen-proxy
 
 > **Disclaimer — educational purposes only.** This project exists to demonstrate
 > how OpenCode's free-tier (`*-free`) models can be accessed through a standard,
@@ -7,7 +7,8 @@
 > rate-limited at any time; use the official OpenCode client where it matters.
 > Respect OpenCode's terms of service.
 
-Python port of https://github.com/bigdata2211it-web/opencode-free-proxy
+OpenAI/Anthropic-compatible proxy for OpenCode free-tier models.
+Inspired by https://github.com/bigdata2211it-web/opencode-free-proxy
 with **auto-fetch + per-model health check**, plus optional routing through a
 headless `opencode serve` backend (recommended).
 

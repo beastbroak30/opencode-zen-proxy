@@ -140,7 +140,7 @@ def upstream_path_for(model: str) -> str:
 
 def http_get_json(url: str, timeout: int = 20) -> object | None:
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "opencode-free-proxy-py/1.0"})
+        req = urllib.request.Request(url, headers={"User-Agent": "opencode-zen-proxy/1.0"})
         with urllib.request.urlopen(req, timeout=timeout) as r:
             return json.loads(r.read().decode("utf-8", "replace"))
     except Exception as e:
@@ -150,7 +150,7 @@ def http_get_json(url: str, timeout: int = 20) -> object | None:
 
 def http_get_text(url: str, timeout: int = 20) -> str | None:
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "opencode-free-proxy-py/1.0"})
+        req = urllib.request.Request(url, headers={"User-Agent": "opencode-zen-proxy/1.0"})
         with urllib.request.urlopen(req, timeout=timeout) as r:
             return r.read().decode("utf-8", "replace")
     except Exception as e:

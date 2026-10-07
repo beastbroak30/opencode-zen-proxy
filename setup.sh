@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# opencode-free-proxy setup for macOS / Linux
+# opencode-zen-proxy setup for macOS / Linux
 set -e
 cd "$(dirname "$0")"
 

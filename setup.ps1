@@ -1,4 +1,4 @@
-# opencode-free-proxy setup for Windows
+# opencode-zen-proxy setup for Windows
 $ErrorActionPreference = "Stop"
 Set-Location $PSScriptRoot
 

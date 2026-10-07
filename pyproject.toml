@@ -1,7 +1,7 @@
 [project]
-name = "opencode-free-proxy-py"
+name = "opencode-zen-proxy"
 version = "1.0.0"
-description = "Python port of opencode-free-proxy with auto-fetch + health-check of free models via Zen API"
+description = "Proxy for OpenCode free-tier models with auto-fetch + health-check of free models via Zen API"
 requires-python = ">=3.10"
 dependencies = [
     "fastapi>=0.115",

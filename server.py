@@ -1,4 +1,4 @@
-"""Python port of opencode-free-proxy (server.mjs) with auto-fetch + health-check.
+"""Proxy for OpenCode free-tier models (inspired by opencode-free-proxy server.mjs) with auto-fetch + health-check.
 
 - OpenAI compat:  POST /v1/chat/completions, GET /v1/models
 - Anthropic:      POST /v1/messages
@@ -156,7 +156,7 @@ async def lifespan(app: FastAPI):
     task.cancel()
 
 
-app = FastAPI(title="opencode-free-proxy-py", version=PROXY_VERSION, lifespan=lifespan)
+app = FastAPI(title="opencode-zen-proxy", version=PROXY_VERSION, lifespan=lifespan)
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"],
                    allow_headers=["*"])
 
