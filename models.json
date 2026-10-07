@@ -1,0 +1,276 @@
+{
+  "models": [
+    "big-pickle",
+    "exo-free",
+    "fledge-alpha-free",
+    "ling-3.1-flash-free",
+    "longcat-2.5-preview-free",
+    "mimo-v2.6-flash-free",
+    "muse-spark-1.2-contributor-free",
+    "muse-spark-1.3-contributor-free",
+    "nemotron-3-ultra-free",
+    "nemotron-3.5-lightning-free",
+    "space-bunny-free"
+  ],
+  "candidates": [
+    "big-pickle",
+    "deepseek-v4-flash-free",
+    "exo-free",
+    "fledge-alpha-free",
+    "jev-1.13-free",
+    "ling-3.0-flash-fin-free",
+    "ling-3.1-flash-free",
+    "longcat-2.5-preview-free",
+    "mimo-v2.5-free",
+    "mimo-v2.6-flash-free",
+    "muse-spark-1.2-contributor-free",
+    "muse-spark-1.3-contributor-free",
+    "nemotron-3-ultra-free",
+    "nemotron-3.5-lightning-free",
+    "space-bunny-free",
+    "glm-4.7-free",
+    "glm-5-free",
+    "hy3-free",
+    "hy3-preview-free",
+    "kimi-k2.5-free",
+    "laguna-s-2.1-free",
+    "ling-2.6-flash-free",
+    "ling-3.0-flash-free",
+    "ling-3.0-tiny-free",
+    "longcat-2.0-free",
+    "mimo-v2-flash-free",
+    "mimo-v2-omni-free",
+    "mimo-v2-pro-free",
+    "minimax-m2.1-free",
+    "minimax-m2.5-free",
+    "minimax-m3-free",
+    "nemotron-3-super-free",
+    "north-mini-code-free",
+    "qwen3.6-plus-free",
+    "ring-2.6-1t-free",
+    "trinity-large-preview-free",
+    "x-preview-f-free"
+  ],
+  "details": {
+    "deepseek-v4-flash-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    },
+    "jev-1.13-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"detail\":{\"error_type\":\"api_usage_error\",\"message\":\"Invalid request.\"}}"
+    },
+    "ling-3.0-flash-fin-free": {
+      "ok": false,
+      "detail": "HTTP 404: {\"status\":404,\"message\":\"Cannot find any route matching [POST] https://opencode.ai/zen/v1/chat/completions\"}"
+    },
+    "fledge-alpha-free": {
+      "ok": true,
+      "detail": "streamed-ok"
+    },
+    "mimo-v2.5-free": {
+      "ok": false,
+      "detail": "HTTP 410: {\"type\":\"error\",\"error\":{\"type\":\"ModelDeprecated\",\"message\":\"Model mimo-v2.5-free has been deprecated. Use mimo-v2.6-flash-free instead.\"},\"metadata\":{\"model\":\"mimo-v2.5-free\",\"replacement\":\"mimo-v2.6"
+    },
+    "exo-free": {
+      "ok": true,
+      "detail": "streamed-ok"
+    },
+    "big-pickle": {
+      "ok": true,
+      "detail": "streamed-ok"
+    },
+    "longcat-2.5-preview-free": {
+      "ok": true,
+      "detail": "streamed-ok"
+    },
+    "ling-3.1-flash-free": {
+      "ok": true,
+      "detail": "streamed-ok"
+    },
+    "mimo-v2.6-flash-free": {
+      "ok": true,
+      "detail": "streamed-ok"
+    },
+    "muse-spark-1.2-contributor-free": {
+      "ok": true,
+      "detail": "streamed-ok"
+    },
+    "glm-4.7-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    },
+    "muse-spark-1.3-contributor-free": {
+      "ok": true,
+      "detail": "streamed-ok"
+    },
+    "nemotron-3.5-lightning-free": {
+      "ok": true,
+      "detail": "streamed-ok"
+    },
+    "glm-5-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    },
+    "hy3-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    },
+    "hy3-preview-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    },
+    "kimi-k2.5-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    },
+    "laguna-s-2.1-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    },
+    "space-bunny-free": {
+      "ok": true,
+      "detail": "streamed-ok"
+    },
+    "ling-3.0-flash-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    },
+    "ling-3.0-tiny-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    },
+    "ling-2.6-flash-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    },
+    "longcat-2.0-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    },
+    "nemotron-3-ultra-free": {
+      "ok": true,
+      "detail": "streamed-ok"
+    },
+    "mimo-v2-flash-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    },
+    "mimo-v2-omni-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    },
+    "mimo-v2-pro-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    },
+    "minimax-m2.1-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    },
+    "minimax-m2.5-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    },
+    "nemotron-3-super-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    },
+    "north-mini-code-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    },
+    "ring-2.6-1t-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    },
+    "minimax-m3-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    },
+    "qwen3.6-plus-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    },
+    "x-preview-f-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    },
+    "trinity-large-preview-free": {
+      "ok": false,
+      "detail": "HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Model is unavailable.\"}}"
+    }
+  },
+  "updated_at": "2026-10-07T07:43:46.449375+00:00",
+  "sources": {
+    "zen_live": [
+      "big-pickle",
+      "deepseek-v4-flash-free",
+      "exo-free",
+      "fledge-alpha-free",
+      "jev-1.13-free",
+      "ling-3.0-flash-fin-free",
+      "ling-3.1-flash-free",
+      "longcat-2.5-preview-free",
+      "mimo-v2.5-free",
+      "mimo-v2.6-flash-free",
+      "muse-spark-1.2-contributor-free",
+      "muse-spark-1.3-contributor-free",
+      "nemotron-3-ultra-free",
+      "nemotron-3.5-lightning-free",
+      "space-bunny-free"
+    ],
+    "models_dev": [
+      "big-pickle",
+      "deepseek-v4-flash-free",
+      "exo-free",
+      "fledge-alpha-free",
+      "glm-4.7-free",
+      "glm-5-free",
+      "hy3-free",
+      "hy3-preview-free",
+      "kimi-k2.5-free",
+      "laguna-s-2.1-free",
+      "ling-2.6-flash-free",
+      "ling-3.0-flash-fin-free",
+      "ling-3.0-flash-free",
+      "ling-3.0-tiny-free",
+      "ling-3.1-flash-free",
+      "longcat-2.0-free",
+      "longcat-2.5-preview-free",
+      "mimo-v2-flash-free",
+      "mimo-v2-omni-free",
+      "mimo-v2-pro-free",
+      "mimo-v2.5-free",
+      "mimo-v2.6-flash-free",
+      "minimax-m2.1-free",
+      "minimax-m2.5-free",
+      "minimax-m3-free",
+      "muse-spark-1.2-contributor-free",
+      "muse-spark-1.3-contributor-free",
+      "nemotron-3-super-free",
+      "nemotron-3-ultra-free",
+      "nemotron-3.5-lightning-free",
+      "north-mini-code-free",
+      "qwen3.6-plus-free",
+      "ring-2.6-1t-free",
+      "space-bunny-free",
+      "trinity-large-preview-free",
+      "x-preview-f-free"
+    ],
+    "github_upstream": [
+      "big-pickle",
+      "deepseek-v4-flash-free",
+      "minimax-m2.5-free",
+      "nemotron-3-super-free",
+      "qwen3.6-plus-free"
+    ],
+    "fallback": [
+      "deepseek-v4-flash-free",
+      "big-pickle",
+      "minimax-m2.5-free",
+      "nemotron-3-super-free",
+      "qwen3.6-plus-free"
+    ]
+  }
+}
