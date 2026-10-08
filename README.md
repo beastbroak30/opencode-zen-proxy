@@ -88,3 +88,49 @@ are picked up on refresh.
 
 Built with help from OpenCode itself.
 Inspired by https://github.com/bigdata2211it-web/opencode-free-proxy
+
+## Live status
+
+<!-- LIVE-STATUS-START -->
+_Last checked: 2026-10-08 08:46 UTC — **0/37 live**_
+
+| Model | Status | Note |
+|---|---|---|
+| `big-pickle` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `deepseek-v4-flash-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `exo-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `fledge-alpha-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `jev-1.13-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `ling-3.0-flash-fin-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `ling-3.1-flash-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `longcat-2.5-preview-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `mimo-v2.5-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `mimo-v2.6-flash-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `muse-spark-1.2-contributor-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `muse-spark-1.3-contributor-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `nemotron-3-ultra-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `nemotron-3.5-lightning-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `space-bunny-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `glm-4.7-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `glm-5-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `hy3-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `hy3-preview-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `kimi-k2.5-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `laguna-s-2.1-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `ling-2.6-flash-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `ling-3.0-flash-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `ling-3.0-tiny-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `longcat-2.0-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `mimo-v2-flash-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `mimo-v2-omni-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `mimo-v2-pro-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `minimax-m2.1-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `minimax-m2.5-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `minimax-m3-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `nemotron-3-super-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `north-mini-code-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `qwen3.6-plus-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `ring-2.6-1t-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `trinity-large-preview-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `x-preview-f-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+<!-- LIVE-STATUS-END -->
