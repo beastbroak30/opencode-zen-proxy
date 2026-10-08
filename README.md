@@ -92,23 +92,23 @@ Inspired by https://github.com/bigdata2211it-web/opencode-free-proxy
 ## Live status
 
 <!-- LIVE-STATUS-START -->
-_Last checked: 2026-10-08 08:54 UTC — **6/37 live**_
+_Last checked: 2026-10-08 16:48 UTC — **7/37 live**_
 
 | Model | Status | Note |
 |---|---|---|
 | `big-pickle` | 🟢 | live |
 | `deepseek-v4-flash-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model deepseek-v4-flash- |
 | `exo-free` | 🔴 | unavailable |
-| `fledge-alpha-free` | 🟢 | live |
-| `jev-1.13-free` | 🔴 | {"type":"error","error":{"type":"error","message":"Internal server error"}} |
+| `fledge-alpha-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model fledge-alpha-free  |
+| `jev-1.13-free` | 🔴 | {"type":"error","error":{"type":"ModelProtocolUnsupported","message":"Model does |
 | `ling-3.0-flash-fin-free` | 🔴 | unavailable |
-| `ling-3.1-flash-free` | 🔴 | unavailable |
+| `ling-3.1-flash-free` | 🟢 | live |
 | `longcat-2.5-preview-free` | 🟢 | live |
 | `mimo-v2.5-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model mimo-v2.5-free is  |
 | `mimo-v2.6-flash-free` | 🟢 | live |
-| `muse-spark-1.2-contributor-free` | 🔴 | {"type":"error","error":{"type":"error","message":"Internal server error"}} |
-| `muse-spark-1.3-contributor-free` | 🔴 | {"type":"error","error":{"type":"error","message":"Internal server error"}} |
-| `nemotron-3-ultra-free` | 🔴 | data: {"error":{"type":"server_error","message":"Streaming response failed: [503 |
+| `muse-spark-1.2-contributor-free` | 🔴 | {"type":"error","error":{"type":"ModelProtocolUnsupported","message":"Model does |
+| `muse-spark-1.3-contributor-free` | 🔴 | {"type":"error","error":{"type":"ModelProtocolUnsupported","message":"Model does |
+| `nemotron-3-ultra-free` | 🟢 | live |
 | `nemotron-3.5-lightning-free` | 🟢 | live |
 | `space-bunny-free` | 🟢 | live |
 | `glm-4.7-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model glm-4.7-free is no |
