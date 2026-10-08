@@ -160,6 +160,9 @@ async def lifespan(app: FastAPI):
     # boot refresh is sync (probes + asyncio.run inside); run it in a thread so
     # it doesn't conflict with uvicorn's running event loop
     await asyncio.get_running_loop().run_in_executor(None, boot_refresh)
+    global SHARED
+    SHARED = httpx.AsyncClient(timeout=300.0, limits=httpx.Limits(
+        max_connections=50, max_keepalive_connections=20))
     task = asyncio.create_task(background_refresher())
     print(f"OpenCode Free Proxy {PROXY_VERSION} on http://0.0.0.0:{PORT}")
     print("  OpenAI:    POST /v1/chat/completions")
@@ -171,11 +174,39 @@ async def lifespan(app: FastAPI):
         print(f"  {name:<15} {key}")
     yield
     task.cancel()
+    if SHARED is not None:
+        await SHARED.aclose()
+
+
+SHARED: httpx.AsyncClient | None = None
+
+
+def shared() -> httpx.AsyncClient:
+    assert SHARED is not None, "server not started"
+    return SHARED
+
+
+def rid() -> str:
+    return "req_" + secrets.token_hex(12)
 
 
 app = FastAPI(title="opencode-zen-proxy", version=PROXY_VERSION, lifespan=lifespan)
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"],
                    allow_headers=["*"])
+
+
+@app.exception_handler(404)
+async def not_found(req: Request, exc):
+    return JSONResponse({"error": {"message": f"Unknown endpoint: {req.url.path}",
+                                   "type": "invalid_request_error",
+                                   "code": "unknown_url"}}, status_code=404)
+
+
+@app.exception_handler(405)
+async def not_allowed(req: Request, exc):
+    return JSONResponse({"error": {"message": f"Method not allowed: {req.url.path}",
+                                   "type": "invalid_request_error",
+                                   "code": "method_not_allowed"}}, status_code=405)
 
 
 # ---------- Anthropic <-> OpenAI conversion (port of server.mjs) ----------
@@ -475,11 +506,39 @@ def chat_response_obj(model: str, text: str, usage: dict | None = None,
 
 # ---------- routes ----------
 
+@app.get("/")
+async def root():
+    return {"object": "opencode-zen-proxy", "version": f"v{PROXY_VERSION}",
+            "endpoints": ["/v1/chat/completions", "/v1/messages",
+                          "/v1/models", "/v1/models/{model}", "/health"]}
+
+
+@app.get("/v1/models/{model_id}")
+async def get_model(model_id: str):
+    if model_id not in live_models():
+        return JSONResponse({"error": {"message": f"The model '{model_id}' does not exist",
+                                       "type": "invalid_request_error",
+                                       "code": "model_not_found"}}, status_code=404)
+    return JSONResponse(
+        {"id": model_id, "object": "model", "created": 1779000000,
+         "owned_by": "opencode-free"},
+        headers={"x-request-id": rid()})
+
+
+@app.post("/v1/embeddings")
+async def embeddings():
+    return JSONResponse({"error": {"message": "embeddings are not supported by free-tier models",
+                                   "type": "invalid_request_error",
+                                   "code": "model_not_supported"}}, status_code=404)
+
+
 @app.get("/v1/models")
 async def list_models():
-    return {"object": "list",
-            "data": [{"id": m, "object": "model", "created": 1779000000,
-                      "owned_by": "opencode-free"} for m in live_models()]}
+    return JSONResponse(
+        {"object": "list",
+         "data": [{"id": m, "object": "model", "created": 1779000000,
+                   "owned_by": "opencode-free"} for m in live_models()]},
+        headers={"x-request-id": rid()})
 
 
 @app.get("/health")
@@ -509,9 +568,8 @@ serve_sessions: dict[str, str] = {}
 
 async def serve_available() -> bool:
     try:
-        async with httpx.AsyncClient(timeout=3.0) as c:
-            r = await c.get(f"{SERVE_URL}/global/health")
-            return r.status_code == 200 and r.json().get("healthy") is True
+        r = await shared().get(f"{SERVE_URL}/global/health", timeout=3.0)
+        return r.status_code == 200 and r.json().get("healthy") is True
     except Exception:
         return False
 
@@ -520,9 +578,8 @@ async def serve_session(user: str) -> str:
     sid = serve_sessions.get(user)
     if sid:
         return sid
-    async with httpx.AsyncClient(timeout=15.0) as c:
-        r = await c.post(f"{SERVE_URL}/session", json={})
-        sid = r.json()["id"]
+    r = await shared().post(f"{SERVE_URL}/session", json={}, timeout=15.0)
+    sid = r.json()["id"]
     serve_sessions[user] = sid
     return sid
 
@@ -548,10 +605,10 @@ async def serve_chat(user: str, model: str, messages: list) -> tuple[str, dict]:
         text_in = "\n".join(system_parts) + "\n\n" + last_user
     payload = {"model": {"providerID": "opencode", "modelID": model},
                "parts": [{"type": "text", "text": text_in}]}
-    async with httpx.AsyncClient(timeout=300.0) as c:
-        r = await c.post(f"{SERVE_URL}/session/{sid}/message", json=payload)
-        r.raise_for_status()
-        data = r.json()
+    r = await shared().post(f"{SERVE_URL}/session/{sid}/message", json=payload,
+                            timeout=300.0)
+    r.raise_for_status()
+    data = r.json()
     text = "".join(p.get("text", "") for p in data.get("parts") or []
                    if isinstance(p, dict) and p.get("type") == "text")
     reasoning = "".join(p.get("text", "") for p in data.get("parts") or []
@@ -595,8 +652,8 @@ async def serve_chat_stream(user: str, model: str, messages: list):
     async with httpx.AsyncClient(timeout=None) as c:
         async with c.stream("GET", f"{SERVE_URL}/event") as ev:
             try:
-                r = await c.post(f"{SERVE_URL}/session/{sid}/prompt_async", json=payload,
-                                 timeout=15.0)
+                r = await shared().post(f"{SERVE_URL}/session/{sid}/prompt_async",
+                                        json=payload, timeout=15.0)
                 r.raise_for_status()
             except Exception:
                 return
