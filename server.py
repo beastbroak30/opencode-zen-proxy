@@ -51,6 +51,21 @@ MODELS: list[str] = load_cached()
 MODELS_UPDATED_AT: str = ""
 api_keys: dict[str, str] = {}
 user_sessions: dict[str, dict] = {}
+# models disabled at runtime because upstream rejected them as
+# unavailable/unsupported (skipped by /v1/models and validation)
+DISABLED: dict[str, str] = {}
+# statuses that mean the model itself is unusable (not transient)
+DISABLING_STATUSES = {400, 401, 403, 404, 410}
+
+
+def mark_disabled(model: str, reason: str) -> None:
+    if model not in DISABLED:
+        DISABLED[model] = reason[:200]
+        print(f"[DISABLE] {model}: {reason[:120]}")
+
+
+def live_models() -> list[str]:
+    return [m for m in MODELS if m not in DISABLED]
 
 
 _ALNUM = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
@@ -697,6 +712,8 @@ async def chat_completions(req: Request):
     try:
         r = await zen_chat_full(model, payload, session)
     except UpstreamError as e:
+        if e.status in DISABLING_STATUSES:
+            mark_disabled(model, f"upstream {e.status}")
         if e.status == 429:
             return JSONResponse({"error": {"message": "Rate limit exceeded (free model rate limit)",
                                             "type": "rate_limit_error"}}, status_code=429)
