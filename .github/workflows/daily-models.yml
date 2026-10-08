@@ -43,13 +43,27 @@ jobs:
 
           mapfile -t MODELS < <(jq -r '.candidates[]' models.json)
           STAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
+          ISO=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
           ROWS=""; LIVE=0; TOTAL=${#MODELS[@]}
+          : > /tmp/results.tsv
           for m in "${MODELS[@]}"; do
             note=$(probe "$m"); sleep 1
-            if [ "$note" = "live" ]; then dot="🟢"; LIVE=$((LIVE+1)); else dot="🔴"; fi
+            if [ "$note" = "live" ]; then dot="🟢"; LIVE=$((LIVE+1)); ok=true; else dot="🔴"; ok=false; fi
             ROWS+="| \`$m\` | $dot | $note |"$'\n'
+            printf '%s\t%s\t%s\n' "$m" "$ok" "$note" >> /tmp/results.tsv
             echo "[$dot] $m -> $note"
           done
+          # models.json is the single source of truth:
+          #  .models     = only live models (dead ones removed automatically)
+          #  .candidates = every known candidate
+          #  .details    = last probe result per model
+          jq --slurpfile res <(jq -R -s 'split("\n") | map(select(length>0) | split("\t") | {id:.[0], ok:(.[1]=="true"), detail:.[2]})' /tmp/results.tsv) \
+             --arg iso "$ISO" '
+             .models = [$res[0][] | select(.ok) | .id]
+             | .details = ($res[0] | map({(.id): {ok, detail}}) | add)
+             | .updated_at = $iso' \
+             models.json > /tmp/models.json && mv /tmp/models.json models.json
+          echo "models.json now serves $(jq -r '.models | length' models.json) live models"
           {
             echo "<!-- LIVE-STATUS-START -->"
             echo "_Last checked: $STAMP — **$LIVE/$TOTAL live**_"
@@ -66,10 +80,10 @@ jobs:
             END{if(!done){print ""; print "## Live status"; print ""; while((getline l < "/tmp/block.md")>0)print l}}' \
             README.md > /tmp/README.md && mv /tmp/README.md README.md
 
-      - name: Commit README if changed
+      - name: Commit status if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
+          git add README.md models.json
           git diff --cached --quiet || git commit -m "chore(status): daily free-model live check"
           git push
