@@ -18,13 +18,13 @@ jobs:
         run: |
           set -u
           UA="opencode/1.18.35 ai-sdk/provider-utils/4.0.23 runtime/bun/1.3.13"
-          TOOLS='[{"type":"function","function":{"name":"bash","description":"r","parameters":{"type":"object","properties":{}}}}},{"type":"function","function":{"name":"read","description":"r","parameters":{"type":"object","properties":{}}}}]'
           probe() {
             model="$1"
-            ses="ses_$(printf '%012x' $(( $(date +%s%3N) & 0xFFFFFFFFFFFF )))$(head -c 32 /dev/urandom | base64 | tr -dc A-Za-z0-9 | head -c 14)"
+            ms=$(date +%s%N | cut -c1-13)
+            ses="ses_$(printf '%012x' $(( 10#$ms & 0xFFFFFFFFFFFF )))$(head -c 32 /dev/urandom | base64 | tr -dc A-Za-z0-9 | head -c 14)"
             msg="msg_$(head -c 32 /dev/urandom | base64 | tr -dc A-Za-z0-9 | head -c 26)"
-            body=$(jq -n --arg m "$model" --argjson t "$TOOLS" \
-              '{model:$m,stream:true,messages:[{role:"user",content:"Reply: OK"}],tools:$t}')
+            body=$(jq -n --arg m "$model" '{model:$m,stream:true,messages:[{role:"user",content:"Reply: OK"}],tools:[{"type":"function","function":{"name":"bash","description":"r","parameters":{"type":"object","properties":{}}}},{"type":"function","function":{"name":"read","description":"r","parameters":{"type":"object","properties":{}}}}]}' 2>/dev/null) || body=""
+            [ -z "$body" ] && { echo "probe-error"; return; }
             out=$(curl -s -m 45 https://opencode.ai/zen/v1/chat/completions \
               -H "Authorization: Bearer public" \
               -H "Content-Type: application/json" \
@@ -57,12 +57,16 @@ jobs:
           #  .models     = only live models (dead ones removed automatically)
           #  .candidates = every known candidate
           #  .details    = last probe result per model
-          jq --slurpfile res <(jq -R -s 'split("\n") | map(select(length>0) | split("\t") | {id:.[0], ok:(.[1]=="true"), detail:.[2]})' /tmp/results.tsv) \
+          # never wipe the served list when every probe fails (runner/network outage)
+          if [ "$LIVE" -gt 0 ]; then
+          jq -R -s 'split("\n") | map(select(length>0) | split("\t") | {id:.[0], ok:(.[1]=="true"), detail:.[2]})' /tmp/results.tsv > /tmp/res.json
+          jq --slurpfile res /tmp/res.json \
              --arg iso "$ISO" '
              .models = [$res[0][] | select(.ok) | .id]
              | .details = ($res[0] | map({(.id): {ok, detail}}) | add)
              | .updated_at = $iso' \
              models.json > /tmp/models.json && mv /tmp/models.json models.json
+          fi
           echo "models.json now serves $(jq -r '.models | length' models.json) live models"
           {
             echo "<!-- LIVE-STATUS-START -->"
