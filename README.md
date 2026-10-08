@@ -1,5 +1,7 @@
 # opencode-zen-proxy
 
+[![daily-model-status](https://github.com/beastbroak30/opencode-zen-proxy/actions/workflows/daily-models.yml/badge.svg)](https://github.com/beastbroak30/opencode-zen-proxy/actions/workflows/daily-models.yml)
+
 > Free LLMs via OpenCode Zen, exposed as a standard OpenAI / Anthropic API.
 > Point any OpenAI-compatible client at this proxy and use OpenCode's
 > free-tier models (`mimo-v2.6-flash-free`, `muse-spark-1.3-contributor-free`,

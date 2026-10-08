@@ -1,0 +1,75 @@
+name: daily-model-status
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # every 24h
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Probe free models + update README
+        run: |
+          set -u
+          UA="opencode/1.18.35 ai-sdk/provider-utils/4.0.23 runtime/bun/1.3.13"
+          TOOLS='[{"type":"function","function":{"name":"bash","description":"r","parameters":{"type":"object","properties":{}}}}},{"type":"function","function":{"name":"read","description":"r","parameters":{"type":"object","properties":{}}}}]'
+          probe() {
+            model="$1"
+            ses="ses_$(printf '%012x' $(( $(date +%s%3N) & 0xFFFFFFFFFFFF )))$(head -c 32 /dev/urandom | base64 | tr -dc A-Za-z0-9 | head -c 14)"
+            msg="msg_$(head -c 32 /dev/urandom | base64 | tr -dc A-Za-z0-9 | head -c 26)"
+            body=$(jq -n --arg m "$model" --argjson t "$TOOLS" \
+              '{model:$m,stream:true,messages:[{role:"user",content:"Reply: OK"}],tools:$t}')
+            out=$(curl -s -m 45 https://opencode.ai/zen/v1/chat/completions \
+              -H "Authorization: Bearer public" \
+              -H "Content-Type: application/json" \
+              -H "User-Agent: $UA" \
+              -H "x-opencode-client: cli" -H "x-opencode-project: global" \
+              -H "x-opencode-request: $msg" -H "x-opencode-session: $ses" \
+              -d "$body" | head -c 4000)
+            case "$out" in
+              *chat.completion.chunk*) echo "live" ;;
+              *FreeTierError*) echo "free-tier gate" ;;
+              *ModelDeprecated*|*410*) echo "deprecated" ;;
+              *unavailable*|*400*) echo "unavailable" ;;
+              *) echo "${out:0:80}" ;;
+            esac
+          }
+
+          mapfile -t MODELS < <(jq -r '.candidates[]' models.json)
+          STAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
+          ROWS=""; LIVE=0; TOTAL=${#MODELS[@]}
+          for m in "${MODELS[@]}"; do
+            note=$(probe "$m"); sleep 1
+            if [ "$note" = "live" ]; then dot="🟢"; LIVE=$((LIVE+1)); else dot="🔴"; fi
+            ROWS+="| \`$m\` | $dot | $note |"$'\n'
+            echo "[$dot] $m -> $note"
+          done
+          {
+            echo "<!-- LIVE-STATUS-START -->"
+            echo "_Last checked: $STAMP — **$LIVE/$TOTAL live**_"
+            echo ""
+            echo "| Model | Status | Note |"
+            echo "|---|---|---|"
+            printf '%s' "$ROWS"
+            echo "<!-- LIVE-STATUS-END -->"
+          } > /tmp/block.md
+          awk 'BEGIN{done=0}
+            /<!-- LIVE-STATUS-START -->/{p=1}
+            p&&/<!-- LIVE-STATUS-END -->/{while((getline l < "/tmp/block.md")>0)print l; p=0; done=1; next}
+            !p{print}
+            END{if(!done){print ""; print "## Live status"; print ""; while((getline l < "/tmp/block.md")>0)print l}}' \
+            README.md > /tmp/README.md && mv /tmp/README.md README.md
+
+      - name: Commit README if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --cached --quiet || git commit -m "chore(status): daily free-model live check"
+          git push
