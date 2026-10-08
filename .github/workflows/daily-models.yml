@@ -2,7 +2,7 @@ name: daily-model-status
 
 on:
   schedule:
-    - cron: "0 6 * * *"   # every 24h
+    - cron: "30 9 * * *"   # 3:00 PM IST daily
   workflow_dispatch: {}
 
 permissions:
