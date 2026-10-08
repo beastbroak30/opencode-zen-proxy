@@ -1,0 +1,17 @@
+# opencode-zen-proxy — for AI agents
+
+A local gateway exposing OpenCode Zen free-tier LLMs as OpenAI/Anthropic APIs.
+
+- Base URL: http://localhost:6446/v1 (LAN: http://<host>:6446/v1)
+- No API key required by default
+- Endpoints: POST /v1/chat/completions (OpenAI, stream supported),
+  POST /v1/messages (Anthropic), GET /v1/models (working free models only),
+  GET /health
+- Streaming includes reasoning (reasoning_content), tool_calls, content
+- Working free models (2026-10-07): big-pickle, exo-free, fledge-alpha-free,
+  ling-3.1-flash-free, longcat-2.5-preview-free, mimo-v2.6-flash-free,
+  muse-spark-1.2-contributor-free, muse-spark-1.3-contributor-free,
+  nemotron-3-ultra-free, nemotron-3.5-lightning-free, space-bunny-free
+- Setup: `python setup.py` (starts opencode serve :4096 + proxy :6446)
+- Requires the `opencode` CLI installed for the recommended routing path
+- Educational use only; not affiliated with OpenCode
