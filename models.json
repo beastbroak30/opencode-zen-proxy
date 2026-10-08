@@ -1,5 +1,12 @@
 {
-  "models": [],
+  "models": [
+    "big-pickle",
+    "fledge-alpha-free",
+    "longcat-2.5-preview-free",
+    "mimo-v2.6-flash-free",
+    "nemotron-3.5-lightning-free",
+    "space-bunny-free"
+  ],
   "candidates": [
     "big-pickle",
     "deepseek-v4-flash-free",
@@ -41,155 +48,155 @@
   ],
   "details": {
     "big-pickle": {
-      "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "ok": true,
+      "detail": "live"
     },
     "deepseek-v4-flash-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model deepseek-v4-flash-"
     },
     "exo-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "unavailable"
     },
     "fledge-alpha-free": {
-      "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "ok": true,
+      "detail": "live"
     },
     "jev-1.13-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"error\",\"message\":\"Internal server error\"}}"
     },
     "ling-3.0-flash-fin-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "unavailable"
     },
     "ling-3.1-flash-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "unavailable"
     },
     "longcat-2.5-preview-free": {
-      "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "ok": true,
+      "detail": "live"
     },
     "mimo-v2.5-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model mimo-v2.5-free is "
     },
     "mimo-v2.6-flash-free": {
-      "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "ok": true,
+      "detail": "live"
     },
     "muse-spark-1.2-contributor-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"error\",\"message\":\"Internal server error\"}}"
     },
     "muse-spark-1.3-contributor-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"error\",\"message\":\"Internal server error\"}}"
     },
     "nemotron-3-ultra-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "data: {\"error\":{\"type\":\"server_error\",\"message\":\"Streaming response failed: [503"
     },
     "nemotron-3.5-lightning-free": {
-      "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "ok": true,
+      "detail": "live"
     },
     "space-bunny-free": {
-      "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "ok": true,
+      "detail": "live"
     },
     "glm-4.7-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model glm-4.7-free is no"
     },
     "glm-5-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model glm-5-free is not "
     },
     "hy3-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model hy3-free is not su"
     },
     "hy3-preview-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model hy3-preview-free i"
     },
     "kimi-k2.5-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model kimi-k2.5-free is "
     },
     "laguna-s-2.1-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model laguna-s-2.1-free "
     },
     "ling-2.6-flash-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model ling-2.6-flash-fre"
     },
     "ling-3.0-flash-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model ling-3.0-flash-fre"
     },
     "ling-3.0-tiny-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model ling-3.0-tiny-free"
     },
     "longcat-2.0-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model longcat-2.0-free i"
     },
     "mimo-v2-flash-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model mimo-v2-flash-free"
     },
     "mimo-v2-omni-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model mimo-v2-omni-free "
     },
     "mimo-v2-pro-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model mimo-v2-pro-free i"
     },
     "minimax-m2.1-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model minimax-m2.1-free "
     },
     "minimax-m2.5-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model minimax-m2.5-free "
     },
     "minimax-m3-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model minimax-m3-free is"
     },
     "nemotron-3-super-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model nemotron-3-super-f"
     },
     "north-mini-code-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model north-mini-code-fr"
     },
     "qwen3.6-plus-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model qwen3.6-plus-free "
     },
     "ring-2.6-1t-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model ring-2.6-1t-free i"
     },
     "trinity-large-preview-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model trinity-large-prev"
     },
     "x-preview-f-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model  is not supported\""
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model x-preview-f-free i"
     }
   },
-  "updated_at": "2026-10-08T08:49:02Z",
+  "updated_at": "2026-10-08T08:54:50Z",
   "sources": {
     "zen_live": [
       "big-pickle",

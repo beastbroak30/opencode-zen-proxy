@@ -92,45 +92,45 @@ Inspired by https://github.com/bigdata2211it-web/opencode-free-proxy
 ## Live status
 
 <!-- LIVE-STATUS-START -->
-_Last checked: 2026-10-08 08:49 UTC — **0/37 live**_
+_Last checked: 2026-10-08 08:54 UTC — **6/37 live**_
 
 | Model | Status | Note |
 |---|---|---|
-| `big-pickle` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `deepseek-v4-flash-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `exo-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `fledge-alpha-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `jev-1.13-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `ling-3.0-flash-fin-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `ling-3.1-flash-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `longcat-2.5-preview-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `mimo-v2.5-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `mimo-v2.6-flash-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `muse-spark-1.2-contributor-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `muse-spark-1.3-contributor-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `nemotron-3-ultra-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `nemotron-3.5-lightning-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `space-bunny-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `glm-4.7-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `glm-5-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `hy3-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `hy3-preview-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `kimi-k2.5-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `laguna-s-2.1-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `ling-2.6-flash-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `ling-3.0-flash-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `ling-3.0-tiny-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `longcat-2.0-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `mimo-v2-flash-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `mimo-v2-omni-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `mimo-v2-pro-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `minimax-m2.1-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `minimax-m2.5-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `minimax-m3-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `nemotron-3-super-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `north-mini-code-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `qwen3.6-plus-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `ring-2.6-1t-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `trinity-large-preview-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
-| `x-preview-f-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model  is not supported" |
+| `big-pickle` | 🟢 | live |
+| `deepseek-v4-flash-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model deepseek-v4-flash- |
+| `exo-free` | 🔴 | unavailable |
+| `fledge-alpha-free` | 🟢 | live |
+| `jev-1.13-free` | 🔴 | {"type":"error","error":{"type":"error","message":"Internal server error"}} |
+| `ling-3.0-flash-fin-free` | 🔴 | unavailable |
+| `ling-3.1-flash-free` | 🔴 | unavailable |
+| `longcat-2.5-preview-free` | 🟢 | live |
+| `mimo-v2.5-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model mimo-v2.5-free is  |
+| `mimo-v2.6-flash-free` | 🟢 | live |
+| `muse-spark-1.2-contributor-free` | 🔴 | {"type":"error","error":{"type":"error","message":"Internal server error"}} |
+| `muse-spark-1.3-contributor-free` | 🔴 | {"type":"error","error":{"type":"error","message":"Internal server error"}} |
+| `nemotron-3-ultra-free` | 🔴 | data: {"error":{"type":"server_error","message":"Streaming response failed: [503 |
+| `nemotron-3.5-lightning-free` | 🟢 | live |
+| `space-bunny-free` | 🟢 | live |
+| `glm-4.7-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model glm-4.7-free is no |
+| `glm-5-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model glm-5-free is not  |
+| `hy3-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model hy3-free is not su |
+| `hy3-preview-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model hy3-preview-free i |
+| `kimi-k2.5-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model kimi-k2.5-free is  |
+| `laguna-s-2.1-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model laguna-s-2.1-free  |
+| `ling-2.6-flash-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model ling-2.6-flash-fre |
+| `ling-3.0-flash-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model ling-3.0-flash-fre |
+| `ling-3.0-tiny-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model ling-3.0-tiny-free |
+| `longcat-2.0-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model longcat-2.0-free i |
+| `mimo-v2-flash-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model mimo-v2-flash-free |
+| `mimo-v2-omni-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model mimo-v2-omni-free  |
+| `mimo-v2-pro-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model mimo-v2-pro-free i |
+| `minimax-m2.1-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model minimax-m2.1-free  |
+| `minimax-m2.5-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model minimax-m2.5-free  |
+| `minimax-m3-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model minimax-m3-free is |
+| `nemotron-3-super-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model nemotron-3-super-f |
+| `north-mini-code-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model north-mini-code-fr |
+| `qwen3.6-plus-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model qwen3.6-plus-free  |
+| `ring-2.6-1t-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model ring-2.6-1t-free i |
+| `trinity-large-preview-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model trinity-large-prev |
+| `x-preview-f-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model x-preview-f-free i |
 <!-- LIVE-STATUS-END -->
