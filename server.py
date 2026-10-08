@@ -479,13 +479,14 @@ def chat_response_obj(model: str, text: str, usage: dict | None = None,
 async def list_models():
     return {"object": "list",
             "data": [{"id": m, "object": "model", "created": 1779000000,
-                      "owned_by": "opencode-free"} for m in MODELS]}
+                      "owned_by": "opencode-free"} for m in live_models()]}
 
 
 @app.get("/health")
 async def health():
-    return {"status": "ok", "version": f"v{PROXY_VERSION}", "models": MODELS,
-            "count": len(MODELS), "updated_at": MODELS_UPDATED_AT,
+    return {"status": "ok", "version": f"v{PROXY_VERSION}", "models": live_models(),
+            "count": len(live_models()), "disabled": DISABLED,
+            "updated_at": MODELS_UPDATED_AT,
             "endpoints": ["/v1/chat/completions", "/v1/messages", "/v1/models"]}
 
 
@@ -637,9 +638,9 @@ async def chat_completions(req: Request):
         return JSONResponse({"error": {"message": "Invalid API key"}}, status_code=401)
     body = await req.json()
     model = body.get("model")
-    if model not in MODELS:
+    if model not in live_models():
         return JSONResponse(
-            {"error": {"message": f"Unknown model: {model}. Available: {', '.join(MODELS)}"}},
+            {"error": {"message": f"Unknown model: {model}. Available: {', '.join(live_models())}"}},
             status_code=400)
     messages = body.get("messages") or []
     stream = bool(body.get("stream"))
@@ -681,6 +682,8 @@ async def chat_completions(req: Request):
         try:
             text, usage = await zen_responses_full(model, messages, session, max_t)
         except UpstreamError as e:
+            if e.status in DISABLING_STATUSES:
+                mark_disabled(model, f"upstream {e.status}")
             return JSONResponse({"error": {"message": f"Upstream {e.status}: {e.detail}"}},
                                 status_code=502)
         except Exception as e:
@@ -704,10 +707,15 @@ async def chat_completions(req: Request):
                 payload["stream"] = True
                 payload.setdefault("tools", ZEN_TOOLS)
                 async for chunk in zen_chat_passthrough(model, payload, session, True):
-                    yield chunk
+                    for line in chunk.split(b"\n"):
+                        line = line.strip()
+                        if line.startswith(b"data:"):
+                            yield line + b"\n\n"
             except RateLimited as e:
                 yield json.dumps({"error": {"message": str(e) + " (free model rate limit)",
                                              "type": "rate_limit_error"}}).encode()
+            else:
+                yield b"data: [DONE]\n\n"
         return StreamingResponse(gen(), media_type="text/event-stream")
     try:
         r = await zen_chat_full(model, payload, session)
@@ -733,11 +741,11 @@ async def anthropic_messages(req: Request):
                                        "message": "Invalid API key"}}, status_code=401)
     body = await req.json()
     model = body.get("model")
-    if model not in MODELS:
+    if model not in live_models():
         return JSONResponse({"type": "error",
                              "error": {"type": "invalid_request_error",
                                        "message": f"Unknown model: {model}. "
-                                                  f"Available: {', '.join(MODELS)}"}},
+                                                  f"Available: {', '.join(live_models())}"}},
                             status_code=400)
     stream = bool(body.get("stream"))
     max_t = body.get("max_tokens") or 1024
@@ -810,6 +818,13 @@ async def anthropic_messages(req: Request):
         try:
             r = await zen_chat_full(model, payload, session)
             data = r.json()
+        except UpstreamError as e:
+            if e.status in DISABLING_STATUSES:
+                mark_disabled(model, f"upstream {e.status}")
+            return JSONResponse({"type": "error",
+                                 "error": {"type": "upstream_error",
+                                           "message": f"Upstream {e.status}: {e.detail}"}},
+                                status_code=502)
         except Exception as e:
             return JSONResponse({"type": "error",
                                  "error": {"type": "upstream_error", "message": str(e)}},
@@ -831,6 +846,8 @@ async def anthropic_messages(req: Request):
     try:
         r = await zen_chat_full(model, payload, session)
     except UpstreamError as e:
+        if e.status in DISABLING_STATUSES:
+            mark_disabled(model, f"upstream {e.status}")
         if e.status == 429:
             return JSONResponse({"type": "error",
                                  "error": {"type": "rate_limit_error",
@@ -854,6 +871,14 @@ async def anthropic_messages(req: Request):
 
 
 if __name__ == "__main__":
+    import argparse
     import uvicorn
+    ap = argparse.ArgumentParser(description="opencode-zen-proxy")
+    ap.add_argument("--no-check", action="store_true",
+                    help="skip startup model probe (use cached models)")
+    ap.add_argument("--port", type=int, default=PORT)
+    args = ap.parse_args()
+    if args.no_check:
+        os.environ["SKIP_CHECK"] = "1"
     load_keys()
-    uvicorn.run(app, host="0.0.0.0", port=PORT)
+    uvicorn.run(app, host="0.0.0.0", port=args.port)
