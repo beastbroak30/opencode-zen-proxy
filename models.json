@@ -1,7 +1,6 @@
 {
   "models": [
     "big-pickle",
-    "ling-3.1-flash-free",
     "longcat-2.5-preview-free",
     "mimo-v2.6-flash-free",
     "nemotron-3-ultra-free",
@@ -58,7 +57,7 @@
     },
     "exo-free": {
       "ok": false,
-      "detail": "unavailable"
+      "detail": "deprecated"
     },
     "fledge-alpha-free": {
       "ok": false,
@@ -73,8 +72,8 @@
       "detail": "unavailable"
     },
     "ling-3.1-flash-free": {
-      "ok": true,
-      "detail": "live"
+      "ok": false,
+      "detail": "unavailable"
     },
     "longcat-2.5-preview-free": {
       "ok": true,
@@ -197,7 +196,7 @@
       "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model x-preview-f-free i"
     }
   },
-  "updated_at": "2026-10-08T16:48:06Z",
+  "updated_at": "2026-10-09T16:27:01Z",
   "sources": {
     "zen_live": [
       "big-pickle",
