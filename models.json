@@ -1,6 +1,7 @@
 {
   "models": [
     "big-pickle",
+    "ling-3.1-flash-free",
     "longcat-2.5-preview-free",
     "mimo-v2.6-flash-free",
     "nemotron-3-ultra-free",
@@ -72,8 +73,8 @@
       "detail": "unavailable"
     },
     "ling-3.1-flash-free": {
-      "ok": false,
-      "detail": "unavailable"
+      "ok": true,
+      "detail": "live"
     },
     "longcat-2.5-preview-free": {
       "ok": true,
@@ -196,7 +197,7 @@
       "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model x-preview-f-free i"
     }
   },
-  "updated_at": "2026-10-09T16:27:01Z",
+  "updated_at": "2026-10-10T15:31:12Z",
   "sources": {
     "zen_live": [
       "big-pickle",
