@@ -1,7 +1,6 @@
 {
   "models": [
     "big-pickle",
-    "ling-3.1-flash-free",
     "longcat-2.5-preview-free",
     "mimo-v2.6-flash-free",
     "nemotron-3-ultra-free",
@@ -54,7 +53,7 @@
     },
     "deepseek-v4-flash-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model deepseek-v4-flash-"
+      "detail": "unavailable"
     },
     "exo-free": {
       "ok": false,
@@ -62,7 +61,7 @@
     },
     "fledge-alpha-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model fledge-alpha-free "
+      "detail": "deprecated"
     },
     "jev-1.13-free": {
       "ok": false,
@@ -73,8 +72,8 @@
       "detail": "unavailable"
     },
     "ling-3.1-flash-free": {
-      "ok": true,
-      "detail": "live"
+      "ok": false,
+      "detail": "unavailable"
     },
     "longcat-2.5-preview-free": {
       "ok": true,
@@ -82,7 +81,7 @@
     },
     "mimo-v2.5-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model mimo-v2.5-free is "
+      "detail": "deprecated"
     },
     "mimo-v2.6-flash-free": {
       "ok": true,
@@ -110,94 +109,94 @@
     },
     "glm-4.7-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model glm-4.7-free is no"
+      "detail": "unavailable"
     },
     "glm-5-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model glm-5-free is not "
+      "detail": "unavailable"
     },
     "hy3-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model hy3-free is not su"
+      "detail": "unavailable"
     },
     "hy3-preview-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model hy3-preview-free i"
+      "detail": "unavailable"
     },
     "kimi-k2.5-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model kimi-k2.5-free is "
+      "detail": "unavailable"
     },
     "laguna-s-2.1-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model laguna-s-2.1-free "
+      "detail": "unavailable"
     },
     "ling-2.6-flash-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model ling-2.6-flash-fre"
+      "detail": "unavailable"
     },
     "ling-3.0-flash-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model ling-3.0-flash-fre"
+      "detail": "unavailable"
     },
     "ling-3.0-tiny-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model ling-3.0-tiny-free"
+      "detail": "unavailable"
     },
     "longcat-2.0-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model longcat-2.0-free i"
+      "detail": "unavailable"
     },
     "mimo-v2-flash-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model mimo-v2-flash-free"
+      "detail": "unavailable"
     },
     "mimo-v2-omni-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model mimo-v2-omni-free "
+      "detail": "unavailable"
     },
     "mimo-v2-pro-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model mimo-v2-pro-free i"
+      "detail": "unavailable"
     },
     "minimax-m2.1-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model minimax-m2.1-free "
+      "detail": "unavailable"
     },
     "minimax-m2.5-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model minimax-m2.5-free "
+      "detail": "unavailable"
     },
     "minimax-m3-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model minimax-m3-free is"
+      "detail": "unavailable"
     },
     "nemotron-3-super-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model nemotron-3-super-f"
+      "detail": "unavailable"
     },
     "north-mini-code-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model north-mini-code-fr"
+      "detail": "unavailable"
     },
     "qwen3.6-plus-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model qwen3.6-plus-free "
+      "detail": "unavailable"
     },
     "ring-2.6-1t-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model ring-2.6-1t-free i"
+      "detail": "unavailable"
     },
     "trinity-large-preview-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model trinity-large-prev"
+      "detail": "unavailable"
     },
     "x-preview-f-free": {
       "ok": false,
-      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model x-preview-f-free i"
+      "detail": "unavailable"
     }
   },
-  "updated_at": "2026-10-11T15:53:15Z",
+  "updated_at": "2026-10-12T19:13:27Z",
   "sources": {
     "zen_live": [
       "big-pickle",

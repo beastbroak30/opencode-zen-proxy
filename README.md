@@ -92,45 +92,45 @@ Inspired by https://github.com/bigdata2211it-web/opencode-free-proxy
 ## Live status
 
 <!-- LIVE-STATUS-START -->
-_Last checked: 2026-10-11 15:53 UTC — **7/37 live**_
+_Last checked: 2026-10-12 19:13 UTC — **6/37 live**_
 
 | Model | Status | Note |
 |---|---|---|
 | `big-pickle` | 🟢 | live |
-| `deepseek-v4-flash-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model deepseek-v4-flash- |
+| `deepseek-v4-flash-free` | 🔴 | unavailable |
 | `exo-free` | 🔴 | deprecated |
-| `fledge-alpha-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model fledge-alpha-free  |
+| `fledge-alpha-free` | 🔴 | deprecated |
 | `jev-1.13-free` | 🔴 | {"type":"error","error":{"type":"ModelProtocolUnsupported","message":"Model does |
 | `ling-3.0-flash-fin-free` | 🔴 | unavailable |
-| `ling-3.1-flash-free` | 🟢 | live |
+| `ling-3.1-flash-free` | 🔴 | unavailable |
 | `longcat-2.5-preview-free` | 🟢 | live |
-| `mimo-v2.5-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model mimo-v2.5-free is  |
+| `mimo-v2.5-free` | 🔴 | deprecated |
 | `mimo-v2.6-flash-free` | 🟢 | live |
 | `muse-spark-1.2-contributor-free` | 🔴 | {"type":"error","error":{"type":"ModelProtocolUnsupported","message":"Model does |
 | `muse-spark-1.3-contributor-free` | 🔴 | {"type":"error","error":{"type":"ModelProtocolUnsupported","message":"Model does |
 | `nemotron-3-ultra-free` | 🟢 | live |
 | `nemotron-3.5-lightning-free` | 🟢 | live |
 | `space-bunny-free` | 🟢 | live |
-| `glm-4.7-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model glm-4.7-free is no |
-| `glm-5-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model glm-5-free is not  |
-| `hy3-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model hy3-free is not su |
-| `hy3-preview-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model hy3-preview-free i |
-| `kimi-k2.5-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model kimi-k2.5-free is  |
-| `laguna-s-2.1-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model laguna-s-2.1-free  |
-| `ling-2.6-flash-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model ling-2.6-flash-fre |
-| `ling-3.0-flash-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model ling-3.0-flash-fre |
-| `ling-3.0-tiny-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model ling-3.0-tiny-free |
-| `longcat-2.0-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model longcat-2.0-free i |
-| `mimo-v2-flash-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model mimo-v2-flash-free |
-| `mimo-v2-omni-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model mimo-v2-omni-free  |
-| `mimo-v2-pro-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model mimo-v2-pro-free i |
-| `minimax-m2.1-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model minimax-m2.1-free  |
-| `minimax-m2.5-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model minimax-m2.5-free  |
-| `minimax-m3-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model minimax-m3-free is |
-| `nemotron-3-super-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model nemotron-3-super-f |
-| `north-mini-code-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model north-mini-code-fr |
-| `qwen3.6-plus-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model qwen3.6-plus-free  |
-| `ring-2.6-1t-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model ring-2.6-1t-free i |
-| `trinity-large-preview-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model trinity-large-prev |
-| `x-preview-f-free` | 🔴 | {"type":"error","error":{"type":"ModelError","message":"Model x-preview-f-free i |
+| `glm-4.7-free` | 🔴 | unavailable |
+| `glm-5-free` | 🔴 | unavailable |
+| `hy3-free` | 🔴 | unavailable |
+| `hy3-preview-free` | 🔴 | unavailable |
+| `kimi-k2.5-free` | 🔴 | unavailable |
+| `laguna-s-2.1-free` | 🔴 | unavailable |
+| `ling-2.6-flash-free` | 🔴 | unavailable |
+| `ling-3.0-flash-free` | 🔴 | unavailable |
+| `ling-3.0-tiny-free` | 🔴 | unavailable |
+| `longcat-2.0-free` | 🔴 | unavailable |
+| `mimo-v2-flash-free` | 🔴 | unavailable |
+| `mimo-v2-omni-free` | 🔴 | unavailable |
+| `mimo-v2-pro-free` | 🔴 | unavailable |
+| `minimax-m2.1-free` | 🔴 | unavailable |
+| `minimax-m2.5-free` | 🔴 | unavailable |
+| `minimax-m3-free` | 🔴 | unavailable |
+| `nemotron-3-super-free` | 🔴 | unavailable |
+| `north-mini-code-free` | 🔴 | unavailable |
+| `qwen3.6-plus-free` | 🔴 | unavailable |
+| `ring-2.6-1t-free` | 🔴 | unavailable |
+| `trinity-large-preview-free` | 🔴 | unavailable |
+| `x-preview-f-free` | 🔴 | unavailable |
 <!-- LIVE-STATUS-END -->
