@@ -92,7 +92,7 @@ Inspired by https://github.com/bigdata2211it-web/opencode-free-proxy
 ## Live status
 
 <!-- LIVE-STATUS-START -->
-_Last checked: 2026-10-13 17:04 UTC — **1/37 live**_
+_Last checked: 2026-10-14 14:36 UTC — **0/37 live**_
 
 | Model | Status | Note |
 |---|---|---|
@@ -102,14 +102,14 @@ _Last checked: 2026-10-13 17:04 UTC — **1/37 live**_
 | `fledge-alpha-free` | 🔴 | deprecated |
 | `jev-1.13-free` | 🔴 | free-tier gate |
 | `ling-3.0-flash-fin-free` | 🔴 | unavailable |
-| `ling-3.1-flash-free` | 🔴 | free-tier gate |
+| `ling-3.1-flash-free` | 🔴 | unavailable |
 | `longcat-2.5-preview-free` | 🔴 | free-tier gate |
 | `mimo-v2.5-free` | 🔴 | deprecated |
 | `mimo-v2.6-flash-free` | 🔴 | free-tier gate |
 | `muse-spark-1.2-contributor-free` | 🔴 | free-tier gate |
-| `muse-spark-1.3-contributor-free` | 🔴 | {"type":"error","error":{"type":"ModelProtocolUnsupported","message":"Model does |
+| `muse-spark-1.3-contributor-free` | 🔴 | free-tier gate |
 | `nemotron-3-ultra-free` | 🔴 | free-tier gate |
-| `nemotron-3.5-lightning-free` | 🟢 | live |
+| `nemotron-3.5-lightning-free` | 🔴 | free-tier gate |
 | `space-bunny-free` | 🔴 | free-tier gate |
 | `glm-4.7-free` | 🔴 | unavailable |
 | `glm-5-free` | 🔴 | unavailable |
