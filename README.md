@@ -92,13 +92,13 @@ Inspired by https://github.com/bigdata2211it-web/opencode-free-proxy
 ## Live status
 
 <!-- LIVE-STATUS-START -->
-_Last checked: 2026-10-15 14:18 UTC — **0/37 live**_
+_Last checked: 2026-10-16 14:07 UTC — **0/37 live**_
 
 | Model | Status | Note |
 |---|---|---|
 | `big-pickle` | 🔴 | free-tier gate |
 | `deepseek-v4-flash-free` | 🔴 | unavailable |
-| `exo-free` | 🔴 | deprecated |
+| `exo-free` | 🔴 | free-tier gate |
 | `fledge-alpha-free` | 🔴 | deprecated |
 | `jev-1.13-free` | 🔴 | free-tier gate |
 | `ling-3.0-flash-fin-free` | 🔴 | unavailable |
