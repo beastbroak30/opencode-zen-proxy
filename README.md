@@ -92,7 +92,7 @@ Inspired by https://github.com/bigdata2211it-web/opencode-free-proxy
 ## Live status
 
 <!-- LIVE-STATUS-START -->
-_Last checked: 2026-10-16 14:07 UTC — **0/37 live**_
+_Last checked: 2026-10-17 13:06 UTC — **0/37 live**_
 
 | Model | Status | Note |
 |---|---|---|
@@ -107,7 +107,7 @@ _Last checked: 2026-10-16 14:07 UTC — **0/37 live**_
 | `mimo-v2.5-free` | 🔴 | deprecated |
 | `mimo-v2.6-flash-free` | 🔴 | free-tier gate |
 | `muse-spark-1.2-contributor-free` | 🔴 | free-tier gate |
-| `muse-spark-1.3-contributor-free` | 🔴 | free-tier gate |
+| `muse-spark-1.3-contributor-free` | 🔴 | deprecated |
 | `nemotron-3-ultra-free` | 🔴 | free-tier gate |
 | `nemotron-3.5-lightning-free` | 🔴 | free-tier gate |
 | `space-bunny-free` | 🔴 | free-tier gate |
