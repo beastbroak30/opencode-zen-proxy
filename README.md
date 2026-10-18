@@ -92,7 +92,7 @@ Inspired by https://github.com/bigdata2211it-web/opencode-free-proxy
 ## Live status
 
 <!-- LIVE-STATUS-START -->
-_Last checked: 2026-10-17 13:06 UTC — **0/37 live**_
+_Last checked: 2026-10-18 13:26 UTC — **0/37 live**_
 
 | Model | Status | Note |
 |---|---|---|
