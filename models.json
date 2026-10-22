@@ -1,8 +1,6 @@
 {
   "models": [
     "big-pickle",
-    "exo-free",
-    "longcat-2.5-preview-free",
     "mimo-v2.6-flash-free",
     "nemotron-3-ultra-free",
     "nemotron-3.5-lightning-free"
@@ -56,8 +54,8 @@
       "detail": "unavailable"
     },
     "exo-free": {
-      "ok": true,
-      "detail": "live"
+      "ok": false,
+      "detail": "deprecated"
     },
     "fledge-alpha-free": {
       "ok": false,
@@ -76,8 +74,8 @@
       "detail": "unavailable"
     },
     "longcat-2.5-preview-free": {
-      "ok": true,
-      "detail": "live"
+      "ok": false,
+      "detail": "unavailable"
     },
     "mimo-v2.5-free": {
       "ok": false,
@@ -105,7 +103,7 @@
     },
     "space-bunny-free": {
       "ok": false,
-      "detail": "deprecated"
+      "detail": "unavailable"
     },
     "glm-4.7-free": {
       "ok": false,
@@ -196,7 +194,7 @@
       "detail": "unavailable"
     }
   },
-  "updated_at": "2026-10-21T14:34:54Z",
+  "updated_at": "2026-10-22T14:36:24Z",
   "sources": {
     "zen_live": [
       "big-pickle",

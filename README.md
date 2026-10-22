@@ -92,25 +92,25 @@ Inspired by https://github.com/bigdata2211it-web/opencode-free-proxy
 ## Live status
 
 <!-- LIVE-STATUS-START -->
-_Last checked: 2026-10-21 14:34 UTC — **6/37 live**_
+_Last checked: 2026-10-22 14:36 UTC — **4/37 live**_
 
 | Model | Status | Note |
 |---|---|---|
 | `big-pickle` | 🟢 | live |
 | `deepseek-v4-flash-free` | 🔴 | unavailable |
-| `exo-free` | 🟢 | live |
+| `exo-free` | 🔴 | deprecated |
 | `fledge-alpha-free` | 🔴 | deprecated |
 | `jev-1.13-free` | 🔴 | {"type":"error","error":{"type":"ModelProtocolUnsupported","message":"Model does |
 | `ling-3.0-flash-fin-free` | 🔴 | unavailable |
 | `ling-3.1-flash-free` | 🔴 | unavailable |
-| `longcat-2.5-preview-free` | 🟢 | live |
+| `longcat-2.5-preview-free` | 🔴 | unavailable |
 | `mimo-v2.5-free` | 🔴 | deprecated |
 | `mimo-v2.6-flash-free` | 🟢 | live |
 | `muse-spark-1.2-contributor-free` | 🔴 | deprecated |
 | `muse-spark-1.3-contributor-free` | 🔴 | deprecated |
 | `nemotron-3-ultra-free` | 🟢 | live |
 | `nemotron-3.5-lightning-free` | 🟢 | live |
-| `space-bunny-free` | 🔴 | deprecated |
+| `space-bunny-free` | 🔴 | unavailable |
 | `glm-4.7-free` | 🔴 | unavailable |
 | `glm-5-free` | 🔴 | unavailable |
 | `hy3-free` | 🔴 | unavailable |
