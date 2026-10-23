@@ -92,7 +92,7 @@ Inspired by https://github.com/bigdata2211it-web/opencode-free-proxy
 ## Live status
 
 <!-- LIVE-STATUS-START -->
-_Last checked: 2026-10-22 14:36 UTC — **4/37 live**_
+_Last checked: 2026-10-23 14:20 UTC — **5/37 live**_
 
 | Model | Status | Note |
 |---|---|---|
@@ -103,7 +103,7 @@ _Last checked: 2026-10-22 14:36 UTC — **4/37 live**_
 | `jev-1.13-free` | 🔴 | {"type":"error","error":{"type":"ModelProtocolUnsupported","message":"Model does |
 | `ling-3.0-flash-fin-free` | 🔴 | unavailable |
 | `ling-3.1-flash-free` | 🔴 | unavailable |
-| `longcat-2.5-preview-free` | 🔴 | unavailable |
+| `longcat-2.5-preview-free` | 🟢 | live |
 | `mimo-v2.5-free` | 🔴 | deprecated |
 | `mimo-v2.6-flash-free` | 🟢 | live |
 | `muse-spark-1.2-contributor-free` | 🔴 | deprecated |

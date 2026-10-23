@@ -1,6 +1,7 @@
 {
   "models": [
     "big-pickle",
+    "longcat-2.5-preview-free",
     "mimo-v2.6-flash-free",
     "nemotron-3-ultra-free",
     "nemotron-3.5-lightning-free"
@@ -74,8 +75,8 @@
       "detail": "unavailable"
     },
     "longcat-2.5-preview-free": {
-      "ok": false,
-      "detail": "unavailable"
+      "ok": true,
+      "detail": "live"
     },
     "mimo-v2.5-free": {
       "ok": false,
@@ -194,7 +195,7 @@
       "detail": "unavailable"
     }
   },
-  "updated_at": "2026-10-22T14:36:24Z",
+  "updated_at": "2026-10-23T14:20:38Z",
   "sources": {
     "zen_live": [
       "big-pickle",
