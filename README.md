@@ -92,24 +92,24 @@ Inspired by https://github.com/bigdata2211it-web/opencode-free-proxy
 ## Live status
 
 <!-- LIVE-STATUS-START -->
-_Last checked: 2026-10-23 14:20 UTC — **5/37 live**_
+_Last checked: 2026-10-24 13:28 UTC — **0/37 live**_
 
 | Model | Status | Note |
 |---|---|---|
-| `big-pickle` | 🟢 | live |
+| `big-pickle` | 🔴 | {"type":"error","error":{"type":"FreeUsageLimitError","message":"Free usage limi |
 | `deepseek-v4-flash-free` | 🔴 | unavailable |
 | `exo-free` | 🔴 | deprecated |
 | `fledge-alpha-free` | 🔴 | deprecated |
-| `jev-1.13-free` | 🔴 | {"type":"error","error":{"type":"ModelProtocolUnsupported","message":"Model does |
+| `jev-1.13-free` | 🔴 | {"type":"error","error":{"type":"FreeUsageLimitError","message":"Free usage limi |
 | `ling-3.0-flash-fin-free` | 🔴 | unavailable |
 | `ling-3.1-flash-free` | 🔴 | unavailable |
-| `longcat-2.5-preview-free` | 🟢 | live |
+| `longcat-2.5-preview-free` | 🔴 | {"type":"error","error":{"type":"FreeUsageLimitError","message":"Free usage limi |
 | `mimo-v2.5-free` | 🔴 | deprecated |
-| `mimo-v2.6-flash-free` | 🟢 | live |
+| `mimo-v2.6-flash-free` | 🔴 | {"type":"error","error":{"type":"FreeUsageLimitError","message":"Free usage limi |
 | `muse-spark-1.2-contributor-free` | 🔴 | deprecated |
 | `muse-spark-1.3-contributor-free` | 🔴 | deprecated |
-| `nemotron-3-ultra-free` | 🟢 | live |
-| `nemotron-3.5-lightning-free` | 🟢 | live |
+| `nemotron-3-ultra-free` | 🔴 | {"type":"error","error":{"type":"FreeUsageLimitError","message":"Free usage limi |
+| `nemotron-3.5-lightning-free` | 🔴 | {"type":"error","error":{"type":"FreeUsageLimitError","message":"Free usage limi |
 | `space-bunny-free` | 🔴 | unavailable |
 | `glm-4.7-free` | 🔴 | unavailable |
 | `glm-5-free` | 🔴 | unavailable |
