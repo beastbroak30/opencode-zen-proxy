@@ -92,22 +92,22 @@ Inspired by https://github.com/bigdata2211it-web/opencode-free-proxy
 ## Live status
 
 <!-- LIVE-STATUS-START -->
-_Last checked: 2026-10-27 15:29 UTC — **0/37 live**_
+_Last checked: 2026-10-28 16:12 UTC — **0/37 live**_
 
 | Model | Status | Note |
 |---|---|---|
 | `big-pickle` | 🔴 | {"type":"error","error":{"type":"FreeUsageLimitError","message":"Free usage limi |
 | `deepseek-v4-flash-free` | 🔴 | unavailable |
-| `exo-free` | 🔴 | deprecated |
+| `exo-free` | 🔴 | unavailable |
 | `fledge-alpha-free` | 🔴 | unavailable |
 | `jev-1.13-free` | 🔴 | {"type":"error","error":{"type":"FreeUsageLimitError","message":"Free usage limi |
 | `ling-3.0-flash-fin-free` | 🔴 | unavailable |
 | `ling-3.1-flash-free` | 🔴 | unavailable |
-| `longcat-2.5-preview-free` | 🔴 | deprecated |
+| `longcat-2.5-preview-free` | 🔴 | unavailable |
 | `mimo-v2.5-free` | 🔴 | unavailable |
 | `mimo-v2.6-flash-free` | 🔴 | {"type":"error","error":{"type":"FreeUsageLimitError","message":"Free usage limi |
 | `muse-spark-1.2-contributor-free` | 🔴 | unavailable |
-| `muse-spark-1.3-contributor-free` | 🔴 | deprecated |
+| `muse-spark-1.3-contributor-free` | 🔴 | unavailable |
 | `nemotron-3-ultra-free` | 🔴 | unavailable |
 | `nemotron-3.5-lightning-free` | 🔴 | {"type":"error","error":{"type":"FreeUsageLimitError","message":"Free usage limi |
 | `space-bunny-free` | 🔴 | unavailable |
